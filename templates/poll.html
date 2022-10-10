@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title> {{ data['title'] }} </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <a href="/"> Create Your Own </a>
+    <center>
+      <div class="title"> {{ data['title'] }} </div>
+      <div class="text"> {{ data['description'] }} </div>
+      {% for option in data['options'] %}
+      <div><button class="button option" onclick="location.href='/response?poll={{ data['id'] }}&option={{ option }}'"> {{ option }} </button></div>
+      {% endfor %}
+      <div class="footer"> Your response is anonymous </div>
+      <img class="footer-lock" alt="lock-icon" src="https://static.thenounproject.com/png/10982-200.png"></img>
+    </center>
+  </body>
+</html>
