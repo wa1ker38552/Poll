@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title> {{ data['title'] }} Results </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <a href="/"> Create Your Own </a>
+    <center>
+      <div class="title"> Results for <b>{{ data['title'] }}</b> </div>
+      <h2> Share this poll: <span class="blue-text" id="copyable"> https://website-name/?poll={{ data['id'] }} </span> <button class="icon-button" onclick="copy()"></button> </h2>
+      {% for option in data['responses'] %}
+      <div class="results-box"> 
+        <b><span class="results-text"> {{ option }}: </span></b>
+        <span class="results-text"> {{ (data['responses'][option]/data['total']*100)|round|int }}% </span>
+      </div>
+      {% endfor %}
+    </center>
+  </body>
+  <script>
+    function copy() {
+      var copyText = document.getElementById("copyable");
+      var textArea = document.createElement("textarea");
+      textArea.value = copyText.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("Copy");
+      textArea.remove();
+    }
+  </script>
+</html>
