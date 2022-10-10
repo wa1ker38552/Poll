@@ -1,0 +1,121 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #39a9fe;
+}
+
+a:hover {font-weight:bold;}
+
+/* text */
+.title {font-size: 5vh;}
+.text {font-size: 2vh;}
+.blue-text {color: #39a9fe;}
+
+.footer {
+  position: absolute;
+  bottom: 1vh;
+  left: 4vh;
+  font-size: 2vh;
+}
+
+/* elements */
+.button {
+  /* style */
+  border-radius: 2vh;
+  width: 7vh;
+  height: 3vh;
+  margin: 1vh;
+  padding: 0.5vh;
+  box-sizing: border-box;
+
+  /* font */
+  font-size: 1.5vh;
+  font-family: "Quicksand", sans-serif;
+
+  /* color */
+  border-color: transparent;
+  background: #dbdbdb;
+}
+
+.button:hover {background: #bfbfbf;}
+
+.input {
+  /* style */
+  border-style: solid;
+  border-radius: 2vh;
+  width: 10%;
+  height: 3vh;
+  margin: 1vh;
+  padding: 0.5vh;
+  box-sizing: border-box;
+
+  /* font */
+  font-size: 1.5vh;
+  font-family: "Quicksand", sans-serif;
+
+  /* color */
+  border-color: transparent;
+  background: #dbdbdb;
+}
+
+.input:focus {
+  background: #b6edc6;
+}
+
+.option {
+  width: 20vh;
+  height: 3vh;
+}
+
+.results-box {
+  /* style */
+  border-style: solid;
+  border-radius: 2vh;
+  width: 20%;
+  height: 10vh;
+  margin: 1vh;
+  padding: 0.5vh;
+  box-sizing: border-box;
+
+  /* font */
+  font-size: 1.5vh;
+  font-family: "Quicksand", sans-serif;
+
+  /* color */
+  border-color: transparent;
+  background: #dbdbdb;
+}
+
+.results-text {
+  position: relative;
+  top: 25%;
+  font-size: 3vh;
+}
+
+.icon-button {
+  border-color: transparent;
+
+  /* background */
+  background-image: url("https://static.thenounproject.com/png/1990948-200.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  width: 2vh;
+  height: 2vh;
+}
+
+.icon-button:active {
+  height: 2.5h;
+  width: 2.5vh;
+}
+
+.footer-lock {
+  position: absolute;
+  left: 1vh;
+  bottom: 1vh;
+  height: 2.5vh;
+  width: 2.5vh;
+}
