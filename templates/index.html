@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Home </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <center>
+      <div class="title"> Create Poll </div>
+      <form action="/create" method="POST">
+        <div><input class="input" type="text" name="title" placeholder="Title" autocomplete="off"/></div>
+        <div><input class="input" type="text" name="description" placeholder="Description" autocomplete="off"/></div>
+        <div><input class="input" type="text" name="options" placeholder="option1; option2; option3" autocomplete="off"/></div>
+        <input type="hidden" name="repeat" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+        <label for="repeat"> Allow repeat submissions </label>
+        </div>
+        <div><input class="button" type="submit" value="Create"/></div>
+      </form>
+    </center>
+  </body>
+</html>
